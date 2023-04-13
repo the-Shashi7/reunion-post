@@ -4,12 +4,11 @@ const { Schema } = mongoose;
 const userSchema = new Schema({
   name: {
     type: String,
-    required: true
+    required:true
   },
   email: {
     type: String,
     required: true,
-    unique: true
   },
   mobile: {
     type: String
@@ -24,13 +23,11 @@ const userSchema = new Schema({
   },
   followers: [{
     type: Schema.Types.ObjectId,
-    ref: "User",
-    required: true,
+    ref: "User"
   }],
   following: [{
     type: Schema.Types.ObjectId,
-    ref: "User",
-    required: true,
+    ref: "User"
   }]
 });
 
